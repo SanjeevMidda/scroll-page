@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: white;
+  background-color: black;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.up,
+.down {
+  position: absolute;
+}
+
+.up {
+  top: 20px;
+  left: 20px;
+}
+
+.down {
+  bottom: 20px;
+  left: 20px;
+}
+
+.one,
+.two,
+.three {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: down 1s;
+}
+
+.one {
+  background: linear-gradient(yellow, pink);
+}
+
+.two {
+  background: linear-gradient(blue, purple);
+}
+
+.three {
+  background: linear-gradient(green, grey);
+}
+
+h1,
+.up,
+.down {
+  background-color: transparent;
+  z-index: 5;
+}
+
+@keyframes down {
+  from {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+h2 {
+  background: transparent;
+  font-size: 100px;
+}
